@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import ValidationError from './validationError';
+import ValidationError from '../validationError';
 import { Link } from 'react-router-dom'
 
 

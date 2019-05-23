@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import HomePage from './homepage';
-import LoginForm from './login-form'
-import RegistrationForm from './register-form';
-import SearchForm from './search-form';
-import CommentForm from './comment-form';
-import SightingForm from './sighting-form';
-import RestoList from './resto-list';
-import RestoItem from './resto-item';
-import LandingPage from './landing-page'
+import HomePage from './homepage/homepage';
+import LoginForm from './login-form/login-form'
+import RegistrationForm from './register-form/register-form';
+import SearchForm from './search-form/search-form';
+import CommentForm from './comment-form/comment-form';
+import SightingForm from './sighting-form/sighting-form';
+import RestoList from './resto-list/resto-list';
+import RestoItem from './resto-item/resto-item';
+import LandingPage from './landing-page/landing-page'
 import {  Route   } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import config from './config'

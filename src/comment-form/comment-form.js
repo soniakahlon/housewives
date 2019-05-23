@@ -1,6 +1,6 @@
 import React, { Component } from  'react';
-import SearchForm from './search-form';
-import config from './config'
+import SearchForm from '../search-form/search-form';
+import config from '../config'
 
 
 
