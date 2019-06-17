@@ -2,8 +2,9 @@ import React from "react";
 
 class RestoItem extends React.Component {
   render() {
+    
+    const comments = comments.map((comment, i) => <span key={i}>{comment}</span>);
   
-   //API INFO//
 
     return (
       <div className="Restaurant">
@@ -13,7 +14,7 @@ class RestoItem extends React.Component {
 
             <div>City: {this.props.city}</div>
             <div>Name of Housewife: {this.props.nameofhw} </div>
-            <div>Comments: {this.props.comment}</div>
+            <div>Comments: {this.props.comments}</div>
           </div>
        
       </div>

@@ -61,7 +61,7 @@ class SightingForm extends Component {
           name: "",
           city: "",
           comment: "",
-          nameOfHw: 1
+          nameOfHw: ""
         });
         this.props.handleAddResto(restaurant);
       })

@@ -1,14 +1,27 @@
 import React, { Component } from  'react';
-import config from '../config'
+import config from '../config';
+import { Link } from 'react-router-dom'
 
 class SearchForm extends Component {
     state = {
         city:"",
         date:"",
-       
+        restaurants:[],
+        restaurant:[]
       };
 
+      setCity(city) {
+        this.setState({
+          city
+        });
+      }
       
+      setDate(date) {
+        this.setState({
+          date
+        });
+      }
+          
   handleSubmit(e) {
     e.preventDefault();
     const API_KEY='config.API_KEY;'
@@ -81,7 +94,9 @@ class SearchForm extends Component {
                 <option value="Least Recent">Least Recent</option>
             </select>
             <button type="reset">Cancel</button>
-            <button type="submit" >Submit</button>
+            <button type="submit"><Link to='/displayresults'>
+               Submit
+          </Link></button>
           </form>
         </div>
       </>
