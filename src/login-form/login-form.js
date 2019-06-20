@@ -1,11 +1,15 @@
 import React,{Component} from 'react';
 import ValidationError from '../validationError';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import TokenService from './token-service';
 
 
 class LoginForm extends Component {
-
+  static defaultProps = {
+    onLoginSuccess: () => {}
+  }
     state = {
+      error: 'null',
          name: '',
          password: '',
          nameValid: false,
@@ -28,11 +32,19 @@ class LoginForm extends Component {
    
      handleSubmit(event) {
        event.preventDefault();
-       const { name, password } = this.state;
+       const { name, password } = this.state; //this.event.target??//
+       TokenService.saveAuthToken(
+               TokenService.makeBasicAuthToken(name.value, password.value)
+             )
+       name.value = ''
+       password.value = ''
+       this.props.onLoginSuccess()
+     }
+   
    
       
       
-     }
+     
    
      validateName(fieldValue) {
        const fieldErrors = {...this.state.validationMessages};
@@ -77,7 +89,7 @@ class LoginForm extends Component {
          passwordValid: !hasError
        }, this.formValid );
    
-     }
+      }
    
      
    
